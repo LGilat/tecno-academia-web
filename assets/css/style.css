@@ -263,6 +263,14 @@ footer{
    background-color: #222222;
 }
 
+footer > h3{
+  color: white;
+}
+
+footer > p {
+  color: white;
+}
+
 div.footer-title{
   background-color: #000000;
   display: flex;
