@@ -1,0 +1,192 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+
+/*************************************************************
+ *                      CABECERA                             * 
+ *            -------------------------------                *
+ ************************************************************/
+header{
+  display: none;
+}
+h1.titulo{
+  margin-left: 5%;
+  font-family: 'Kolker Brush', cursive;
+  font-size: 7.2em;
+  text-align:center;
+}
+/*************************************************************/
+
+
+/*************************************************************
+ *                MENU CABECERA                              * 
+ *       -------------------------------                     *
+ ************************************************************/
+nav {
+  display:none; 
+}
+/*************************************************************/
+
+
+section {
+  display: flex;
+  width: 100%;
+}
+section.seccion-articles{
+  display:flex;
+  flex-direction: column;
+}
+section.seccion-articles > article{
+  border: 1px solid black;
+  border-radius: 23px;
+  box-shadow: 1px 1px 2px 0  #000000;
+  margin: 2%;
+  padding: 3%;
+}
+
+
+ /*************************************************************
+  *       COLORES, FONDOS, TIPO DE FUENTES                    * 
+  *       -------------------------------                     *
+  ************************************************************/
+@font-face {
+  font-family:'Oswald';
+  src:local('Oswald'),
+  url(../webfonts/static/Oswald-Bold.ttf) format('truetype'),
+  url(../webfonts/static/Oswald-ExtraLight.ttf) format('truetype'),
+  url(../webfonts/static/Oswald-Light.ttf) format('truetype'),
+  url(../webfonts/static/Oswald-Medium.ttf) format('truetype'),
+  url(../webfonts/static/Oswald-Regular.ttf) format('truetype'),
+  url(../webfonts/static/Oswald-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik Bubbles';
+  src:local('Rubik Bubbles'),
+  url(../webfonts/RubikBubbles-Regular.ttf) format('truetype');
+}
+h1,h3,h4,h5
+{
+	font-family: 'Courier 10 Pitch', sans-serif;
+  color: #2c2f3a /* color de tipo negro para título */
+}
+article>h2{
+  font-family: 'Oswald'; 
+  font-weight: 200;
+  font-size: 1.8em;
+}
+section,footer, article, input, textarea, label, form{
+	font-family: 'Courier 10 Pitch', sans-serif;
+}
+nav a{
+  font-size:xx-large;
+  font-family: 'Rubik Bubbles', cursive;
+  font-weight: normal;
+  transition: color 0.4s linear;
+}
+
+ nav > a:link{ color: green; }
+ nav > a:visited{ color: orange; }
+ nav > a:hover{ color: red;}
+ nav > a:active{ color: black;}
+ nav > a:focus { color: purple;}
+
+/****************************************************************/
+
+/*************************************************************
+ *       LISTAS ZONA ASIDE IZQUIERDA                         * 
+ *       -------------------------------                     *
+ ************************************************************/
+aside{
+  display:none;
+}
+/****************************************************************/
+
+
+/*************************************************************
+*                   TABLA CONTACTO HTML                     *
+*             ---------------------------------             *
+************************************************************/
+table,tr, th, td, tbody, thead{
+	border: 1px solid red;
+}
+table{
+  caption-side: bottom;
+  border-collapse: collapse;
+  table-layout: auto;
+  text-align:center;
+  width: 100%;
+}
+thead > tr:first-child{
+  background-color: #cccccc;
+  padding: 5%;
+}
+tr:nth-child(odd){ background-color: orange;}
+tr:nth-child(even){ background-color: green;}
+/****************************************************************/
+
+
+/*************************************************************
+ *                   FORMULARIO CONTACTO HTML                *
+ *             ---------------------------------             *
+ ************************************************************/
+.formulario{
+  width: 70%;
+  margin: 0 auto;
+}
+.form-input{
+  display:flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+.form-input > input {
+  margin-right: 8%;
+  padding: 0.65%;
+}
+.form-input > label{
+  margin-right: 3%;
+  padding: 0.65%;
+}
+.datos-personales{
+  padding:3%;
+  margin: 2%;
+}
+.form-input > input[type="checkbox"]{
+  margin-bottom: 2%;
+}
+.form-input > label[for="aceptar"]{
+  width: 100%;
+  margin-left: 1%;
+  margin-bottom: 2%;
+}
+textarea{
+  width: 100%;
+}
+
+.button-form{
+  margin: 0 auto;
+  width: 60%;
+}
+
+footer{
+  display:none;
+}
+
+
+@media (max-width: 960px){
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 560px){
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+

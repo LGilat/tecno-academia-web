@@ -1,0 +1,236 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+@font-face {
+  font-family:'Oswald';
+  src:local('Oswald'),
+  url(./assets/webfonts/static/Oswald-Bold.ttf) format('truetype'),
+  url(./assets/webfonts/static/Oswald-ExtraLight.ttf) format('truetype'),
+  url(./assets/webfonts/static/Oswald-Light.ttf) format('truetype'),
+  url(./assets/webfonts/static/Oswald-Medium.ttf) format('truetype'),
+  url(./assets/webfonts/static/Oswald-Regular.ttf) format('truetype'),
+  url(./assets/webfonts/static/Oswald-SemiBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik Bubbles';
+  src:local('Rubik Bubbles'),
+  url(./assets/webfonts/RubikBubbles-Regular.ttf) format('truetype');
+}
+
+
+
+
+
+
+header{
+  text-align: center;
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+	border-radius: 0 0 85% 85% / 30%;
+}
+
+.fondo-grandiente{
+  width: 100%;
+  height: 100%;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  background-image: linear-gradient( 35deg, #9f05ff69 10%, #fd5e086b 100%);
+}
+
+h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 80px;
+	margin-bottom: 30px;
+}
+
+h3, p {
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 30px;
+}
+
+.card-info{
+	background-image: url('./images/imagetablet.jpg');
+	background-position: left;
+  background-size: 25% 100%;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  border-radius: 18px;
+  margin: 5%;
+  padding: 1%;
+  max-width: 65%;
+}
+
+div.description {
+  padding-right: 5%;
+  margin-left: 25%;
+  max-width: 78%;
+}
+
+div.description > h1 {
+  font-family: 'Rubik Bubbles';
+  font-size: 1.7rem;
+  margin: 0;
+}
+
+div.description > h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #a2a2a2;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+div.descripcion > p {
+  line-height: 1.6; 
+}
+
+.read-more{
+  text-align: right;
+}
+
+.read-more > a {
+  color: green;
+  display: inline-block;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 10px 20px;
+	border-radius: 50px;
+	color: #333;
+	background: #fff;
+	margin-bottom: 50px;
+	box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+	cursor: pointer;
+}
+
+section.contenido{
+  display:flex;
+}
+
+section.zone-card-info{
+  display:flex;
+  border: 5px solid red;
+}
+
+article.cuerpo1{
+  border: 1px solid black;
+}
+
+article.nav2{
+  border: 1px solid purple;
+}
+
+section.informacion-contenido{
+  border: 5px solid black;
+}
+
+
+section.banner{
+  border: 5px solid orange;
+}
+
+
+/* bloque de ul  menu de navegacion*/
+.lista-nav{
+  display: flex;
+  justify-content:flex-end;
+  background-color: #2175bc;
+  overflow: auto;
+  transition: background-color 1s linear;
+}
+.lista-nav > li{
+  display:block;
+  padding: 1%;
+  margin-right: 3%;
+  border-right: 1px solid white;
+}
+.lista-nav:hover{
+  background-color: #fff;  
+}
+.lista-nav > li > a{
+  font-family:'Oswald';
+  text-decoration: none;
+  background-color: #2175bc;
+  color: #fff;
+}
+
+.keepcoding{
+  background-color: #000000;
+  display:flex;
+}
+.keepcoding > a {
+  margin: 0 auto;
+  font-weight:bold;
+  color: #ffffff;
+}
+
+.bootcamps > h3 {
+  color: orange;
+}
+.bootcamps li {
+  list-style-type:none;
+}
+.bootcamps  a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.media-info{
+  display:flex;
+  justify-content: space-around;
+}
+.reservado-derecho{
+  background-color: #000000;
+  color: #ffffff;
+}
+.siguenos > h3{
+  color: orange;
+}
+.siguenos > ul>li {
+  display: inline-block;
+  list-style:none;
+}
+
+footer{
+  background-color: #222222;
+}
+
+@media (max-width: 960px){
+  section.contenido{
+    display:flex;
+    flex-direction: column;
+  }
+  .media-info{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+}
+
+
+@media (max-width: 500px){
+  section.contenido{
+    display:flex;
+    flex-direction: column;
+  }
+  .media-info{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+  }
+  section.zone-card-info{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
