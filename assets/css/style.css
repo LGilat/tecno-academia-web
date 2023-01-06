@@ -159,7 +159,7 @@ thead > tr:first-child{
   padding: 5%;
 }
 tr:nth-child(odd){ background-color: orange;}
-tr:nth-child(even){ background-color: green;}
+tr:nth-child(even){ background-color: #005C00; color: #ffffff;}
 /****************************************************************/
 
 /*************************************************************
