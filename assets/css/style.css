@@ -3,6 +3,38 @@
   padding:0;
 }
 img:not([alt]) { border: 3px dashed red;}
+
+body{
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+main{
+  padding: 1.5rem;
+}
+
+.site-header{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border-bottom: 1px solid #dbe4f2;
+}
+
+.site-header img{
+  max-width: 120px;
+  height: auto;
+}
+
+.subtitle{
+  margin-top: -0.4rem;
+  font-size: 1rem;
+  color: #475569;
+}
+
 [href$=".pdf"]::after{
   content: url("../images/imagefilepdf.png");
 }
@@ -32,32 +64,38 @@ h1.titulo{
 nav {
   position: sticky;
   position: -webkit-sticky;
-  top:0px;
-  border: 1px solid black; 
-  box-shadow: 1px 1px 2px 0  #000000;
-  padding: 2%;
+  top: 0;
+  z-index: 2;
+  border-bottom: 1px solid #d5dfef;
+  background-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 0.9rem 1.5rem;
 }
 nav a {
   text-decoration: none;
-  margin: 1%;
+  margin-right: 1rem;
 }
 /*************************************************************/
 
 
-section {
-  display: flex;
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
   width: 100%;
 }
 section.seccion-articles{
   display:flex;
   flex-direction: column;
+  gap: 1rem;
 }
 section.seccion-articles > article{
-  border: 1px solid black;
-  border-radius: 23px;
-  box-shadow: 1px 1px 2px 0  #000000;
-  margin: 2%;
-  padding: 3%;
+  border: 1px solid #d4dfef;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  padding: 1.4rem;
 }
 
 
@@ -94,7 +132,7 @@ section,footer, article, input, textarea, label, form{
 	font-family: 'Courier 10 Pitch', sans-serif;
 }
 nav a{
-  font-size:xx-large;
+  font-size:1.35rem;
   font-family: 'Rubik Bubbles', cursive;
   font-weight: normal;
   transition: color 0.4s linear;
@@ -122,9 +160,9 @@ aside ul > li {
   background-color: #ffffff;
   margin: 2%;
   padding: 2%;
-  border: 1px solid orange;
+  border: 1px solid #9bb3d9;
   border-radius: 13px;
-  box-shadow: 1px 1px 2px 0  #000000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
   list-style-type:none;
   transition: border-width 0.6s linear;
 }
@@ -145,7 +183,7 @@ aside ul > li > a:focus { color: purple;}
 *             ---------------------------------             *
 ************************************************************/
 table,tr, th, td, tbody, thead{
-	border: 1px solid red;
+	border: 1px solid #9bb3d9;
 }
 table{
   caption-side: bottom;
@@ -158,8 +196,8 @@ thead > tr:first-child{
   background-color: #cccccc;
   padding: 5%;
 }
-tr:nth-child(odd){ background-color: orange;}
-tr:nth-child(even){ background-color: #005C00; color: #ffffff;}
+tr:nth-child(odd){ background-color: #eaf2ff;}
+tr:nth-child(even){ background-color: #dbe9ff; color: #0f172a;}
 /****************************************************************/
 
 /*************************************************************
@@ -250,6 +288,24 @@ textarea{
 .button-form{
   margin: 0 auto;
   width: 60%;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-form:hover{
+  background: #1d4ed8;
+}
+
+.fieldset-formulario{
+  border: 1px solid #c8d8f2;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #f8fbff;
 }
 
 /****************************************************************/
@@ -260,7 +316,8 @@ textarea{
  *             ---------------------------------             *
  ************************************************************/
 footer{
-   background-color: #222222;
+   background-color: #0f172a;
+   margin-top: 2rem;
 }
 
 footer > h3{
@@ -272,11 +329,11 @@ footer > p {
 }
 
 div.footer-title{
-  background-color: #000000;
+  background-color: #020617;
   display: flex;
   justify-content: space-between;
   color: white;
-  padding: 1%;
+  padding: 1rem 1.5rem;
 }
 
 
@@ -314,21 +371,32 @@ div.validators-css{
 /****************************************************************/
 
 @media (max-width: 960px){
-  section {
-    display: flex;
-    flex-direction: column;
+  .main-layout {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 500px){
-  section {
-    display: flex;
-    flex-direction: column;
-  }
   div.footer-info {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .form-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .form-input > input,
+  .form-input > textarea {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  h1.titulo {
+    font-size: 4.4rem;
   }
 }
 
